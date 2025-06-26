@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Poppins&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat Alternates", sans-serif;
+}
+
+body {
+    background-color: red ;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+.capa {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+/*Estilos para el encabezado*/
+.header {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 120px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    gap: 40%;
+
+}
+
+
+.container .btn-menu,
+.logo {
+    float: left;
+    line-height: 120px;
+}
+
+.container .btn-menu label {
+    color: #000000;
+    font-size: 25px;
+    cursor: pointer;
+    font-weight:bold;
+}
+
+
+.logo h1 {
+    color: #000000;
+    font-weight: 400;
+    font-size: 22px;
+    margin-left: 10px;
+    font-weight:bold;
+}
+
+.container .menu {
+    float: right;
+    line-height: 120px;
+}
+
+
+.container .menu a {
+    display: inline-block;
+    padding: 15px;
+    line-height: normal;
+    text-decoration: none;
+    color: #000000;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    font-size: 25px;
+    margin-right: 5px;
+    font-weight:bold;
+}
+
+.container .menu a:hover {
+    border-bottom: 2px solid #c7c7c7;
+    padding-bottom: 5px;
+    
+}
+
+.container .imagen {
+    position: absolute;
+    right: -80cap;
+    
+}
+
+.container .imagen img {
+    width: 10%;
+    box-shadow: 0 0 10px rgba(153, 138, 1, 0.5);
+}
+
+/*Fin de Estilos para el encabezado*/
+section {
+    
+    padding: 25px;
+    line-height: normal;
+    text-decoration: none;
+    width: 90%; /* O un ancho fijo como 800px; ajústalo según necesites */
+    margin: 0 auto;
+    margin-top: 100px;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    box-sizing: border-box;
+}
+table th,table td{
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+table th{
+    background-color: black;
+    font-weight: 600;
+    text-align: center;
+    color: #fcfcfc;
+}
+/*Menù lateral*/
+#btn-menu {
+    display: none;
+}
+
+.container-menu {
+    
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+
+}
+
+#btn-menu:checked~.container-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.cont-menu {
+    line-height: 60%;
+    width: 80%;
+    max-width: 300px;
+    background: #1c1c1c;
+    height: 100vh;
+    position: relative;
+    transition: all 500ms ease;
+    transform: translateX(-100%);
+    
+}
+
+#btn-menu:checked~.container-menu .cont-menu {
+    transform: translateX(0%);
+}
+
+.cont-menu nav {
+    transform: translateY(15%);
+}
+
+.cont-menu nav a {
+    display: flex;
+    text-decoration: none;
+    padding: 20px;
+    color: #c7c7c7;
+    border-left: 5px solid transparent;
+    transition: all 400ms ease;
+}
+
+.cont-menu nav a:hover {
+    border-left: 5px solid #c7c7c7;
+    background: #1f1f1f;
+}
+
+.cont-menu label {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+
+        .boton-guardar {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #008CBA;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .boton-guardar:hover {
+            background-color: #007B9E;
+        }
+        .mensaje {
+            text-align: center;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        .mensaje.exito {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+
+        }
+        .mensaje.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        select {
+            width: 100%; /* Asegurar que el select ocupe el espacio */
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
